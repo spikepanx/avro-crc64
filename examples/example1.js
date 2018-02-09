@@ -1,21 +1,3 @@
-# avro-crc64
-
-## Features
-- Computes the 64-bit AVRO fingerprint for a given AVRO schema string
-
-## Installation
-```bash
-npm install avro-64
-```
-
-## Documentation
-- API (tbd)
-
-## Examples
-
-One can find this example in the /examples folder.
-
-```js
 /* example 1 */
 const { fingerprint64AvroSchema } = require('../src');
 
@@ -39,4 +21,3 @@ fingerprint64AvroSchema(JSON.stringify(avroSchemaExample))
     return console.log(hexFingerprint); // logs "b75d6f7da238cf70"
   })
 ;
-```
