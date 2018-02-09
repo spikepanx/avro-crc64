@@ -1,0 +1,11 @@
+{
+  "extends": "../.eslintrc.js",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "amd": true
+  },
+  "rules": {
+    "global-require": "off"
+  }
+}

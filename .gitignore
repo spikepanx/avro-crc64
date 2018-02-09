@@ -1,0 +1,21 @@
+# directories
+.idea
+.vscode
+coverage
+node_modules
+out
+
+# files
+config/local.js
+run.js
+
+# file types
+*.local
+*.log
+*.tmp
+
+# generated
+.DS_Store
+.sonarlint
+Desktop.ini
+Thumbs.db
