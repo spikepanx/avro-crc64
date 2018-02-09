@@ -12,11 +12,9 @@ let fpTable;
  * @description
  * @returns
  */
-
 const parseAsync = Bluebird.method(JSON.parse); // safe JSON.parse
-// const typeForSchemaAsync = Bluebird.method(avro.Type.forSchema);
 
- function initFingerprintTable() {
+function initFingerprintTable() {
   const empty = Long.fromString(EMPTY, true, 16);
   const table = [];
 
@@ -78,28 +76,6 @@ async function fingerprint64AvroSchema(schemaString) {
 
 // let's go
 fpTable = initFingerprintTable();
-
-
-
-/*
-
-const dlpSchema = require('../tests/DataPortabilityResponse.avsc.json');
-const dlpType = avro.Type.forSchema(dlpSchema);
-
-const mceSchema = '{"type":"record","name":"DataPortabilityResponse","namespace":"com.telefonica.germany.streams.dlp.dsgvo.v1","doc":"Data Portability Response Schema","fields":[{"name":"DataAccessURI","type":"string","doc":""},{"name":"DataExpirationDate","type":"string","doc":""}],"aliases":["com.telefonica.germany.streams.dlp.dsgvo.v1.dev.DataPortabilityResponse","com.telefonica.germany.streams.dlp.dsgvo.v1.e2e1.DataPortabilityResponse","com.telefonica.germany.streams.dlp.dsgvo.v1.e2e2.DataPortabilityResponse"]}';
-
-const mceType = avro.Type.forSchema(JSON.parse(mceSchema));
-
-
-const dlpCanonicalSchema = JSON.stringify(dlpType.schema(canonicalSchemaOpts));
-const mceCanonicalSchema = JSON.stringify(mceType.schema(canonicalSchemaOpts));
-
-console.log(dlpCanonicalSchema);
-console.log();
-
-console.log(mceCanonicalSchema);
-console.log(fingerprint64(Buffer.from(mceCanonicalSchema)));
-*/
 
 module.exports = {
   initFingerprintTable,
