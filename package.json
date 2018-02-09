@@ -1,8 +1,8 @@
 {
-  "name": "fp-avro-64",
+  "name": "avro-crc64",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Rabin 64 bit crc fingerprint for AVRO Single-object encoding",
+  "main": "src/index.js",
   "engines": {
     "node": ">=8"
   },
@@ -13,6 +13,10 @@
   "author": {
     "name": "Michael Heinecke",
     "email": "root.heinecke@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spikepanx/avro-crc64"
   },
   "license": "MIT",
   "devDependencies": {
@@ -26,6 +30,8 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
     "mocha": "^5.0.0"
   },
   "dependencies": {
