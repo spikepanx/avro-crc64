@@ -11,6 +11,7 @@ run.js
 
 # file types
 *.local
+*.local.js
 *.log
 *.tmp
 

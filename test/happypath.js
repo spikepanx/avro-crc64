@@ -5,7 +5,7 @@ const errors = require('../src/errors');
 
 describe('Rabin 64 Bit CRC Fingerprint', () => {
   it('should compute the correct fingerprint', () => {
-    const { schemaString, fingerprint } = require('./fixtures/validAvroSchema');
+    const { schemaString, fingerprint } = require('./fixtures/avroOK');
 
     const promise = expect(fingerprint64AvroSchema(schemaString))
       .to.eventually.be.fulfilled
