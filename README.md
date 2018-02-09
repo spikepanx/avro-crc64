@@ -7,7 +7,7 @@
 
 ## Installation
 ```bash
-npm install avro-64
+npm install avro-crc64
 ```
 
 ## Documentation
