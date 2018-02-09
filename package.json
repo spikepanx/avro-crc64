@@ -7,7 +7,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "test": "mocha --watch -r ./test/testHelper.js ./test/*.js"
+    "test": "mocha -r ./test/testHelper.js ./test/*.js"
   },
   "keywords": [],
   "author": {
