@@ -1,5 +1,5 @@
 # avro-crc64
-
+[![Build Status](https://travis-ci.org/spikepanx/avro-crc64.svg?branch=master)](https://travis-ci.org/spikepanx/avro-crc64)
 ## Features
 - Computes the 64-bit AVRO fingerprint for a given AVRO schema string
 
