@@ -1,7 +1,7 @@
 # avro-crc64
 [![Build Status](https://travis-ci.org/spikepanx/avro-crc64.svg?branch=master)](https://travis-ci.org/spikepanx/avro-crc64)
 [![Coverage Status](https://coveralls.io/repos/github/spikepanx/avro-crc64/badge.svg?branch=master)](https://coveralls.io/github/spikepanx/avro-crc64?branch=master)
-
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
 
 ## Features
 - Computes the 64-bit AVRO fingerprint for a given AVRO schema string
