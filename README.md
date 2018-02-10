@@ -11,15 +11,12 @@ npm install avro-crc64
 ```
 
 ## Documentation
-- API (tbd)
+- [API](docs/API.md)
 
 ## Examples
 
-One can find this example in the /examples folder.
-
 ```js
-/* example 1 */
-const { fingerprint64AvroSchema } = require('../src');
+const { fingerprint64AvroSchema } = require('avro-crc64');
 
 const avroSchemaExample = {
   type: 'record',
@@ -36,9 +33,8 @@ const avroSchemaExample = {
 
 fingerprint64AvroSchema(JSON.stringify(avroSchemaExample))
   .then((uint8) => {
-    const hexFingerprint = Buffer.from(uint8).toString('hex');
+    const hexFingerprint = Buffer.from(uint8.buffer).toString('hex');
 
     return console.log(hexFingerprint); // logs "b75d6f7da238cf70"
   })
-;
-```
+;```
