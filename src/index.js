@@ -57,14 +57,14 @@ function fingerprint64(buf) {
  */
 async function fingerprint64AvroSchema(schemaString) {
   const schema = await parseAsync(schemaString)
-    .catch(SyntaxError, err => Bluebird.reject(new errors.AvroSchemaStringSyntaxException(err)));
+    .catch(SyntaxError, err => Bluebird.reject(new errors.AvroSchemaStringSyntaxError(err)));
 
   let type; // AVSC Avro type instance
   try {
     type = avro.Type.forSchema(schema);
   } catch (err) {
     // TODO: be more specific
-    throw (new errors.InvalidAvroSchemaException(err));
+    throw (new errors.InvalidAvroSchemaError(err));
   }
 
   const canonicalSchema = type.schema({ exportAttrs: false, noDeref: false });

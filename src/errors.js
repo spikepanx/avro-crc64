@@ -1,4 +1,4 @@
-class AvroSchemaStringSyntaxException extends Error {
+class AvroSchemaStringSyntaxError extends Error {
 /**
  * Creates an instance of AvroSchemaStringSyntaxException.
  * @param {Error} err
@@ -11,7 +11,7 @@ class AvroSchemaStringSyntaxException extends Error {
   }
 }
 
-class InvalidAvroSchemaException extends Error {
+class InvalidAvroSchemaError extends Error {
   /**
    * Creates an instance of InvalidAvroSchemaException.
    * @param {Error} err
@@ -25,6 +25,6 @@ class InvalidAvroSchemaException extends Error {
 }
 
 module.exports = {
-  AvroSchemaStringSyntaxException,
-  InvalidAvroSchemaException,
+  AvroSchemaStringSyntaxError,
+  InvalidAvroSchemaError,
 };

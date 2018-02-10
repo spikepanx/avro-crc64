@@ -14,16 +14,16 @@ describe('Rabin 64 Bit CRC Fingerprint', () => {
     return promise;
   });
 
-  it('should reject invalid JSON with AvroSchemaStringSyntaxException Error', () => {
+  it('should reject invalid JSON with AvroSchemaStringSyntaxError Error', () => {
     const invalidJson = 'foobar';
 
     const promise = expect(fingerprint64AvroSchema(invalidJson))
-      .to.eventually.be.rejectedWith(errors.AvroSchemaStringSyntaxException)
+      .to.eventually.be.rejectedWith(errors.AvroSchemaStringSyntaxError)
     ;
     return promise;
   });
 
-  it('should reject invalid AVRO schema with InvalidAvroSchemaException Error', () => {
+  it('should reject invalid AVRO schema with InvalidAvroSchemaError Error', () => {
     const invalidSchema = JSON.stringify({
       type: 'record',
       fields: [{ name: 'foo' }],
@@ -31,7 +31,7 @@ describe('Rabin 64 Bit CRC Fingerprint', () => {
     });
 
     const promise = expect(fingerprint64AvroSchema(invalidSchema))
-      .to.eventually.be.rejectedWith(errors.InvalidAvroSchemaException)
+      .to.eventually.be.rejectedWith(errors.InvalidAvroSchemaError)
     ;
     return promise;
   });

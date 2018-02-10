@@ -1,6 +1,6 @@
 {
   "name": "avro-crc64",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Rabin 64 bit crc fingerprint for AVRO Single-object encoding",
   "main": "src/index.js",
   "engines": {
